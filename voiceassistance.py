@@ -32,7 +32,7 @@ def listen():
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source)
         try:
-            print("Recognizing...")
+            print("Recognizing your prompt ...")
             query = recognizer.recognize_google(audio, language='en-US')
             print(f"User said: {query}")
         except sr.UnknownValueError:
